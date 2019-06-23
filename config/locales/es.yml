@@ -1,0 +1,79 @@
+es:
+  activerecord:
+    errors:
+      models:
+        staff:
+          attributes:
+            email:
+            name:
+            role:
+            invalid: "yoyyo es inválido"
+            password:
+            password_confirmation:
+        desk:
+          attributes:
+            name:
+            occupied:
+        booking:
+          attributes:
+            status:
+            from_date:
+      template:
+        body: "Hubo problemas con los siguientes campos:"
+        header:
+          one: "1 error prohibido este %{model} de ser guardado"
+          other: "%{count} errores prohibidos este %{model} de ser guardado"
+      messages:
+        inclusion: "No está incluido en la lista"
+        exclusion: "Está reservado"
+        invalid: "es inválido"
+        confirmation: "No coincide con la confirmación"
+        accepted: "Debe ser aceptado"
+        empty: "No puede estar vacío"
+        blank: "No puede estar en blanco"
+        too_long: "Es demasiado largo (el máximo es %{count} caracteres)"
+        too_short: "Es demasiado corto (el mínimo es %{count} caracteres)"
+        wrong_length: "Es la longitud incorrecta (debe ser %{count} caracteres)"
+        taken: "ya se ha tomado"
+        not_a_number: "No es un numero"
+        greater_than: "Debe ser mayor que %{count}"
+        greater_than_or_equal_to: "Debe ser mayor o igual a %{count}"
+        equal_to: "Debe ser igual a %{count}"
+        less_than: "Debe ser menor que %{count}"
+        less_than_or_equal_to: "Debe ser menor o igual a %{count}"
+        odd: "Debe ser extraño"
+        even: "Debe ser par"
+  hello: "Hola Mundo"
+  invalid_user_name: "Usuario o contraseña invalido"
+  not_authorized: "No está autorizado a ingresar"
+  invalid_auth_token: "Símbolo de autenticación no válido"
+  logged_out: "Usuario cerrado con éxito"
+  permission_denied: "No tienes privilegios para acceder a esta acción."
+  require_user: "Debes iniciar sesión para acceder a esta página"
+  require_no_user: "El usuario ya ha iniciado sesión"
+  unauthorised_access: "Acceso no autorizado"
+  params_required: "Params no válidos"
+  reset_link_sent: "Restablecer enlace de contraseña enviado correctamente"
+  password_change_success: "Contraseña cambiada con éxito"
+  password_update_success: "Contraseña actualizada exitosamente"
+  invalid_password_token: "Símbolo de contraseña no válido"
+  password_dont_match: "Confirmación de contraseña y contraseña no coinciden"
+  invalid_current_password: "Contraseña actual no válida"
+  image_format_required: "El archivo debe ser una imagen gif, jpg o png"
+  success_email: "Correo enviado correctamente"
+  upload_success: "Cargado con éxito"
+  upload_failed: "Se ha producido un error en la carga, inténtalo de nuevo."
+  employee_update_failed: "No se puede actualizar la información del empleado a medida que se procesa al empleado"
+  employee_cannot_fill: "El empleado no puede llenar la información del gerente de contratación"
+  hm_info_required: "Llenar la información del gerente de contrataciones"
+  frequency_taken: "La frecuencia ya ha sido tomada"
+  message:
+    invalid_email: "Usuarios no encontrados con el correo electrónico : %{email}"
+    invalid_username: "Usuario no encontrado con el nombre de usuario : %{username}"
+    load_application_status: "Estado de la aplicación no encontrado con el código : %{id}"
+    subscription_not_found: "Suscripción no encontrada con id : %{id}"
+    sup_program_status_not_found: "Estado del programa suplementario no encontrado con el código : %{id}"
+    sup_program_not_found: "Programa complementario no encontrado con código : %{id}"
+    target_group_not_found: "Grupo de destino no encontrado con el código : %{id}"
+    zone_status_not_found: "Estado de la zona no encontrado con el código : %{id}"
+    zone_not_found: "Zona no encontrada con el código : %{id}"
