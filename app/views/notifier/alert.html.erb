@@ -1,0 +1,19 @@
+<html>
+  <body>
+    <p> Hello <b><%= @to %>, </b><br/></p>
+    <table class="table table-striped table-bordered">
+      <tr>
+        <th>Desk</th>
+        <th>From</th>
+        <th>To</th>
+      </tr>
+      <% @bookings.each do |booking| %>
+        <tr>
+          <td><%=h booking.desk.name %></td>
+          <td><%=h booking.from_date.strftime('%d %b') %></td>
+          <td><%=h booking.to_date.strftime('%d %b') %></td>
+        </tr>
+      <% end %>
+    </table>
+  </body>
+</html>

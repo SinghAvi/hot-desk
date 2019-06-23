@@ -4,6 +4,10 @@ class Booking < ApplicationRecord
 
  	after_save :occupy_desk
 
+  def self.booking_alert
+		Notifier.alert(self.all)
+	end
+
  	private
 
  	def occupy_desk

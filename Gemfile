@@ -42,6 +42,14 @@ gem 'bootstrap-sass'
 # For date/time
 gem 'bootstrap-datepicker-rails'
 
+# For localization
+gem 'i18n'
+gem 'rails-i18n', '~> 5.0.0'
+gem 'i18n-active_record', :require => 'i18n/active_record'
+
+# For daily booking reports
+gem 'whenever', require: false
+
 # For the authentication process
 gem 'devise'
 
