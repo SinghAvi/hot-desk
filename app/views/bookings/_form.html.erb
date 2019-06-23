@@ -1,0 +1,29 @@
+<%= form_with(model: booking, local: true) do |f| %>
+  <% if booking.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(booking.errors.count, "error") %> prohibited this booking from being saved:</h2>
+
+      <ul>
+      <% booking.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= f.label :select_seat %>
+    <%= f.select :desk_id, Desk.free_desks.order(:code).collect { |s| [ "#{s.name}", s.id ] } %>
+  </div>
+  <div>
+    <%= f.label :from_date, "From Date" %>
+    <%= f.date_field :from_date, data:{ provide:'datepicker' } %>
+  </div>
+  <div>
+    <%= f.label :to_date, "To Date" %>
+    <%= f.date_field :to_date, data:{ provide:'datepicker' } %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Book" %>
+  </div>
+<% end %>

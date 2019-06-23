@@ -1,0 +1,10 @@
+<div class="well col-lg-12">
+	<div class='row'> Name: <%= @staff.name %> </div>
+	<div class='row'> Email: <%= @staff.email %> </div>
+	<div class='row'> Desk: <%= @staff.bookings.last.desk.name %> </div>
+	<div class='row'> Date: <%= "#{@staff.bookings.last.from_date.strftime('%d %b')} - #{@staff.bookings.last.to_date.strftime('%d %b')}" %> </div>
+</div>
+
+<div class="well col-lg-12">
+	<%= link_to 'Back', staffs_path %>
+</div>
