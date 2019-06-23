@@ -3,4 +3,7 @@ class HomeController < ApplicationController
     @staffs = Staff.general_staffs.includes(:bookings).where.not(bookings: {staff_id: nil})
     # @bookings = Booking.all
   end
+
+  def admin
+  end
 end

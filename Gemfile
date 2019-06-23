@@ -43,15 +43,19 @@ gem 'bootstrap-sass'
 gem 'bootstrap-datepicker-rails'
 
 # For localization
-gem 'i18n'
-gem 'rails-i18n', '~> 5.0.0'
-gem 'i18n-active_record', :require => 'i18n/active_record'
+# gem 'i18n'
+# gem 'rails-i18n', '~> 5.0.0'
+# gem 'i18n-active_record', :require => 'i18n/active_record'
 
 # For daily booking reports
 gem 'whenever', require: false
 
 # For the authentication process
 gem 'devise'
+
+# For the administartion
+# gem 'activeadmin', github: 'activeadmin'
+# gem 'inherited_resources', github: 'activeadmin/inherited_resources'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

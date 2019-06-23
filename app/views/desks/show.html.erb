@@ -1,4 +1,9 @@
-<p id="notice"><%= notice %></p>
-
-<%= link_to 'Edit', edit_desk_path(@desk) %> |
-<%= link_to 'Back', desks_path %>
+<h1> Desk Details </h1>
+<div class="well col-lg-12">
+	<div class='row'> From: <%= @desk.name %> </div>
+	<div class='row'> To: <%= @desk.occupied %> </div>
+</div>
+<div class="well col-lg-12">
+	<%= link_to 'Edit', edit_desk_path(@desk) %> |
+	<%= link_to 'Back', desks_path %>
+</div>

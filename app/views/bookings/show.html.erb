@@ -1,7 +1,7 @@
 <h1> Booking Details </h1>
 <div class="well col-lg-12">
-	<div class='row'> From: <%= @booking.from_date.strftime('%d %b') %> </div>
-	<div class='row'> To: <%= @booking.to_date.strftime('%d %b') %> </div>
+	<div class='row'> From: <%= @booking.from_date.try(:strftime, '%d %b') %> </div>
+	<div class='row'> To: <%= @booking.to_date.try(:strftime, '%d %b') %> </div>
 	<div class='row'> Desk: <%= @booking.desk.name %> </div>
 </div>
 <div class="well col-lg-12">

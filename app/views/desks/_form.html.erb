@@ -1,17 +1,28 @@
-<%= form_with(model: desk, local: true) do |form| %>
-  <% if desk.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(desk.errors.count, "error") %> prohibited this desk from being saved:</h2>
+<div class="well col-lg-12">
+  <%= form_with(model: desk, local: true) do |f| %>
+    <% if desk.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(desk.errors.count, "error") %> prohibited this desk from being saved:</h2>
 
-      <ul>
-      <% desk.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+        <ul>
+        <% desk.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div>
+      <%= f.label :name %>
+      <%= f.text_field :name, value: f.object.name %>
+    </div>
+    <div>
+      <%= f.label :occupied %>
+      <%= f.select :occupied, [ [ 'Yes', true ], [ 'No', false ] ] %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit %>
     </div>
   <% end %>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+</div>

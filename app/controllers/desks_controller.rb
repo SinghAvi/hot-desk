@@ -53,13 +53,13 @@ class DesksController < ApplicationController
 
   # DELETE /desks/1
   # DELETE /desks/1.json
-  def destroy
-    @desk.destroy
-    respond_to do |format|
-      format.html { redirect_to desks_url, notice: 'Desk was successfully destroyed.' }
-      format.json { head :no_content }
-    end
-  end
+  # def destroy
+  #   @desk.destroy
+  #   respond_to do |format|
+  #     format.html { redirect_to desks_url, notice: 'Desk was successfully destroyed.' }
+  #     format.json { head :no_content }
+  #   end
+  # end
 
   private
     # Use callbacks to share common setup or constraints between actions.
@@ -69,6 +69,6 @@ class DesksController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def desk_params
-      params.fetch(:desk, {})
+      params.fetch(:desk, {}).permit(:name, :occupied)
     end
 end
