@@ -1,33 +1,35 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   'true': 'foo'
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
 en:
   hello: "Hello world"
+  invalid_user_name: "Invalid user_name or password"
+  not_authorized: "Not authorized to login"
+  invalid_auth_token: "Invalid Auth Token"
+  logged_out: "User logged out successfully"
+  permission_denied: "You don't have privileges to access this action"
+  require_user: "You must be logged in to access this page"
+  require_no_user: "User already logged in"
+  params_required: "Invalid params"
+  unauthorised_access: "Unauthorized access"
+  reset_link_sent: "Reset password link sent successfully"
+  password_change_success: "Password changed successfully"
+  password_update_success: "Password updated successfully"
+  invalid_password_token: "Invalid password token"
+  password_dont_match: "Password and password confirmation doesn't match"
+  invalid_current_password: "Invalid current password"
+  image_format_required: "File must be a gif, jpg, or png image"
+  success_email: "Email sent successfully"
+  upload_success: "Successfully Uploaded"
+  upload_failed: "Upload failed, Please try again"
+  employee_update_failed: "Cannot update employee information as the employee is processed"
+  employee_cannot_fill: "Employee cannot fill in hiring manager info"
+  hm_info_required: "Fill hiring manager info"
+  frequency_taken: "Frequency has already been taken"
+  message:
+    invalid_email: "Users not found with email: %{email}"
+    invalid_username: "User not found with user name: %{username}"
+    load_application_status: "Application status not found with code: %{id}"
+    subscription_not_found: "Subscription Not found with id: %{id}"
+    sup_program_status_not_found: "Supplementary Program status not found with code: %{id}"
+    sup_program_not_found: "Supplementary Program not found with code: %{id}"
+    target_group_not_found: "Target Group not found with code: %{id}"
+    zone_status_not_found: "Zone status not found with code: %{id}"
+    zone_not_found: "Zone not found with code: %{id}"

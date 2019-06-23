@@ -6,5 +6,5 @@
 </div>
 <div class="well col-lg-12">
 	<%= link_to 'Edit', edit_booking_path(@booking) %> |
-	<%= link_to 'Back', bookings_path %>
+	<%= link_to 'Back', current_staff.admin? ? bookings_path : root_path %>
 </div>

@@ -44,7 +44,9 @@ class BookingsController < ApplicationController
   # PATCH/PUT /bookings/1.json
   def update
     respond_to do |format|
+      desk = @booking.desk
       if @booking.update(booking_params)
+        release_old_desk(desk)
         format.html { redirect_to @booking, notice: 'Booking was successfully updated.' }
         format.json { render :show, status: :ok, location: @booking }
       else
@@ -57,8 +59,8 @@ class BookingsController < ApplicationController
   # DELETE /bookings/1
   # DELETE /bookings/1.json
   def destroy
-    @booking.desk.update(occupied: false)
-    @booking.update(status: false)
+    release_old_desk(@booking.desk)
+    @booking.update(status: false, desk_id: nil)
     respond_to do |format|
       format.html { redirect_to bookings_url, notice: 'Booking was successfully destroyed.' }
       format.json { head :no_content }
@@ -73,6 +75,10 @@ class BookingsController < ApplicationController
 
     def set_staff
       @staff = current_staff
+    end
+
+    def release_old_desk(desk)
+      desk.update(occupied: false)
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

@@ -18,7 +18,9 @@
       <%= f.select :desk_id, Desk.free_desks.order(:code).collect { |s| [ "#{s.name}", s.id ] } %>
       <% else %>
         <div class="text-left"> No seats available, Please ask Admin to create new seats. </div>
-        <div class="text-left"> <%= link_to 'Create New Seat', new_desk_path, :class => "btn btn-primary" %> </div>
+        <% if current_staff.admin? %>
+          <div class="text-left"> <%= link_to 'Create New Seat', new_desk_path, :class => "btn btn-primary" %> </div>
+        <% end %>
       <% end %>
     </div>
     <div>

@@ -1,5 +1,6 @@
 class StaffsController < ApplicationController
   before_action :set_staff, only: [:show, :edit, :update, :destroy]
+  before_action :check_role, only: [:index]
 
   # GET /staffs
   # GET /staffs.json
